@@ -2,9 +2,6 @@
 
 This project aims to assist individuals whose resumes are being rejected due to their criminal records by matching them with jobs where their crimes do not reflect negatively.
 
-## Project-TWA
-
-Transformative Workforce Academy (TWA) - This project aims to provide a second chance for individuals with criminal records.
 
 ### Functional Requirements
 
