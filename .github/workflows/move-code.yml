@@ -15,8 +15,8 @@ jobs:
 
       - name: Move code to target branch
         run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git config user.name "${{ NavyaNelluri }}"
+          git config user.email "${{ NavyaNelluri }}@users.noreply.github.com"
           git checkout target-branch  # Replace with the target branch name you want to move the code to
           git merge --no-ff --no-edit DEV  # Replace with the source branch name you want to merge from
           git push origin main  # Replace with the target branch name you want to push the code to
