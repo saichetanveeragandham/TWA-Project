@@ -6,7 +6,7 @@ from sendgrid.helpers.mail import Mail, Email, To, Content
 def send_email(api_key, to_email, from_email):
     print("hi");
     message = Mail(
-        from_email="navya.nelluri98@gmail.com",
+        from_email="navyachowdary.neluri@slu.edu",
         to_emails="navya.nelluri98@gmail.com",
         subject='Notification: Push event on main branch',
         plain_text_content=''' A push event has occurred on the main branch.
@@ -17,7 +17,7 @@ def send_email(api_key, to_email, from_email):
     )
 
     #try:
-    sg = sendgrid.SendGridAPIClient(api_key='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')
+    sg = sendgrid.SendGridAPIClient(api_key='nmMMUXFsQ7OE-OQhWgjYog')
     print("hello")
     response = sg.send(message)
     print('SendGrid API response:', response.status_code, response.body)
