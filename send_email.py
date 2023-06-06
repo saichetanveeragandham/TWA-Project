@@ -2,6 +2,7 @@ import sendgrid
 from sendgrid.helpers.mail import Mail
 
 def send_email(api_key, to_email, from_email):
+    print("hi");
     message = Mail(
         from_email=from_email,
         to_emails=to_email,
@@ -14,7 +15,7 @@ def send_email(api_key, to_email, from_email):
     )
 
     try:
-        sg = sendgrid.SendGridAPIClient(api_key=api_key)
+        sg = sendgrid.SendGridAPIClient(api_key='nmMMUXFsQ7OE-OQhWgjYog')
         response = sg.send(message)
         print('Email sent successfully')
     except Exception as e:
