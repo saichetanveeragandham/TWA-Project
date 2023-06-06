@@ -23,7 +23,7 @@ jobs:
 
       - name: Send Email Notification
         env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDGRID_API_KEY: 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
           TO_EMAIL: saichetan.veeragandham@slu.edu
           FROM_EMAIL: navyachowdary.nelluri@slu.edu
         run: |
