@@ -11,7 +11,7 @@ def send_email(api_key, to_email, from_email):
         subject='Notification: Push event on main branch',
         plain_text_content=''' A push event has occurred on the main branch.
         
-        
+       
        Thanks,
         Team TWA'''
     )
