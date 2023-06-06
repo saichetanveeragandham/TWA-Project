@@ -1,19 +1,21 @@
-name: Manual Trigger
-
+name: Send Mail Notification
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  manual-trigger:
+  send-notification:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: Send Mail Notification
+        run: |
+          # Get the current branch name
+          branch=$(git rev-parse --abbrev-ref HEAD)
 
-      # Add your desired steps here
-      # For example:
-      - name: Print Message
-        run: echo "This workflow was manually triggered."
-
-      # Add more steps as needed
+          # Send a mail notification
+          mailx -s "Push event on $branch branch" \
+            -a "From: navyachowdary.nelluri@slu.edu" \
+            -b "To: navya.nelluri98@gmail.com" \
+            "A push event has occurred on the $branch branch."
