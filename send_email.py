@@ -21,8 +21,8 @@ def send_email(api_key, to_email, from_email):
         print('SendGrid API response:', response.status_code, response.body)
 
         print('Email sent successfully')
-    except Exception as e:
-        print('Error sending email:', str(e))
+    #except Exception as e:
+        #print('Error sending email:', str(e))
 
 if __name__ == '__main__':
     import sys
