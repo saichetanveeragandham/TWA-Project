@@ -19,7 +19,7 @@ def send_email(api_key, to_email, from_email):
 if __name__ == '__main__':
     import sys
 
-    api_key = sys.argv[1]
-    to_email = sys.argv[2]
-    from_email = sys.argv[3]
+    api_key = sys.argv[0]
+    to_email = sys.argv[1]
+    from_email = sys.argv[2]
     send_email(api_key, to_email, from_email)
