@@ -23,8 +23,8 @@ jobs:
 
       - name: Send Email Notification
         env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          TO_EMAIL: saichetan.veeragandham@slu.edu
-          FROM_EMAIL: navyachowdary.nelluri@slu.edu
+          SENDGRID_API_KEY: nmMMUXFsQ7OE-OQhWgjYog
+          TO_EMAIL: navya.nelluri98@gmail.com
+          FROM_EMAIL: navya.nelluri98@gmail.com
         run: |
           python send_email.py $SENDGRID_API_KEY $TO_EMAIL $FROM_EMAIL
