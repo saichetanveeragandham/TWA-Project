@@ -1,22 +1,21 @@
-name: Move Code to Another Branch
+name: Move code on push
 
 on:
   push:
     branches:
-      - DEV  # Replace with the source branch name you want to move the code from
+      - DEV
 
 jobs:
   move-code:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout DEV branch
         uses: actions/checkout@v2
+        with:
+          ref: DEV
 
-      - name: Move code to target branch
+      - name: Move code to main branch
         run: |
-          git config user.name "NavyaNelluri"
-          git config user.email "NavyaNelluri@users.noreply.github.com"
-          git checkout main  # Replace with the target branch name you want to move the code to
-          git merge --no-ff --no-edit ${{ github.ref }}  # Merge the source branch into the target branch
-          git push origin main  # Replace with the target branch name you want to push the code to
+          git checkout main
+          git merge DEV
+          git push
