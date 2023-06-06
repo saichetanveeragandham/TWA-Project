@@ -17,7 +17,7 @@ def send_email(api_key, to_email, from_email):
     )
 
     #try:
-    sg = sendgrid.SendGridAPIClient(api_key='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')
+    sg = sendgrid.SendGridAPIClient(api_key='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')
     print("hello")
     response = sg.send(message)
     print('SendGrid API response:', response.status_code, response.body)
