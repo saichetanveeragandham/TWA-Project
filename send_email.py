@@ -14,13 +14,13 @@ def send_email(api_key, to_email, from_email):
         Team TWA'''
     )
 
-    try:
-        sg = sendgrid.SendGridAPIClient(api_key='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')
-        print("hello")
-        response = sg.send(message)
-        print('SendGrid API response:', response.status_code, response.body)
+    #try:
+     sg = sendgrid.SendGridAPIClient(api_key='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')
+     print("hello")
+     response = sg.send(message)
+     print('SendGrid API response:', response.status_code, response.body)
 
-        print('Email sent successfully')
+     print('Email sent successfully')
     #except Exception as e:
         #print('Error sending email:', str(e))
 
