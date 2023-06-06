@@ -2,7 +2,7 @@ name: Create Merge Request
 on:
   push:
     branches:
-      - dev
+      - DEV
 
 jobs:
   create-merge-request:
@@ -11,15 +11,18 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create Merge Request
         run: |
-          git checkout dev
+          git checkout DEV
           git fetch origin
-          git merge origin/dev
+          git merge origin/DEV
           git push --follow-tags
-          git checkout master
-          git merge dev
+          git checkout main
+          git merge DEV
           git push
           # Create a merge request with the following title:
-          # "Merge dev into master"
+          # "Merge DEV into main"
           # and the following body:
-          # "This merge request merges the dev branch into the master branch.
+          # "This merge request merges the DEV branch into the main branch.
           # Please review and merge."
+          # You can also use the following to set the assignee and labels of your merge request:
+          # github.action.assignees = ["user1", "user2"]
+          # github.action.labels = ["bug", "feature"]
