@@ -16,6 +16,7 @@ def send_email(api_key, to_email, from_email):
 
     try:
         sg = sendgrid.SendGridAPIClient(api_key='nmMMUXFsQ7OE-OQhWgjYog')
+        print("hello")
         response = sg.send(message)
         print('Email sent successfully')
     except Exception as e:
