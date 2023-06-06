@@ -1,21 +1,30 @@
-name: Send Mail Notification
+name: Send Email Notification on Main Branch Push
+
 on:
   push:
     branches:
       - main
 
 jobs:
-  send-notification:
+  send-email-notification:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Send Mail Notification
-        run: |
-          # Get the current branch name
-          branch=$(git rev-parse --abbrev-ref HEAD)
 
-          # Send a mail notification
-          mailx -s "Push event on $branch branch" \
-            -a "From: navyachowdary.nelluri@slu.edu" \
-            -b "To: navya.nelluri98@gmail.com" \
-            "A push event has occurred on the $branch branch."
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install SendGrid
+        run: pip install sendgrid
+
+      - name: Send Email Notification
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          TO_EMAIL: navyachowdary.nelluri@slu.edu
+          FROM_EMAIL: navya.nelluri98@gmail.com
+        run: |
+          python send_email.py $SENDGRID_API_KEY $TO_EMAIL $FROM_EMAIL
