@@ -12,7 +12,7 @@ def send_email(api_key, to_email, from_email):
         plain_text_content=''' A push event has occurred on the main branch.
         
         
-        Thanks,
+       Thanks,
         Team TWA'''
     )
 
