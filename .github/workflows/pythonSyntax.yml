@@ -25,6 +25,6 @@ jobs:
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           TO_EMAIL: navyachowdary.nelluri@slu.edu
-          FROM_EMAIL: navya.nelluri98@gmail.com
+          FROM_EMAIL: navyachowdary.nelluri@slu.edu
         run: |
           python send_email.py $SENDGRID_API_KEY $TO_EMAIL $FROM_EMAIL
