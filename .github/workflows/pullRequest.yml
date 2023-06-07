@@ -1,12 +1,12 @@
 # .github/workflows/main.yml
-# This configuration is for GitHub Actions
 
 name: Create Merge Request
 
 on:
   push:
     branches:
-      - DEV
+      - dev
+  workflow_dispatch: # Manual trigger event
 
 jobs:
   create_merge_request:
@@ -15,8 +15,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Merge DEV into main
+      - name: Merge dev into main
         run: |
           git checkout main
-          git merge DEV --no-ff --no-commit
+          git merge dev --no-ff --no-commit
           git push origin main
