@@ -18,16 +18,5 @@ jobs:
       - name: Merge DEV into main
         run: |
           git checkout main
-          git merge DEV --no-ff --no-commit
-
-          # Manual conflict resolution
-          # Open the affected files in a text editor and resolve the conflicts
-
-          # Add the resolved changes to the staging area
-          git add .
-
-          # Finalize the merge commit
-          git commit
-
-          # Push the merged changes to the remote main branch
-          git push origin main
+          git merge DEV --no-ff --no-commit || echo "::set-output name=merge_failed::true"
+          git push origin main || echo "::set-output name=push_failed::true"
