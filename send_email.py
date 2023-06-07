@@ -2,7 +2,6 @@ import os
 import sendgrid
 from sendgrid.helpers.mail import Mail, Email, To, Content
 
-
 def send_email(api_key, to_email, from_email):
     print("hi");
     message = Mail(
@@ -11,7 +10,7 @@ def send_email(api_key, to_email, from_email):
         subject='TWA Notification: Push event on main branch',
         plain_text_content=''' A push event has occurred on the main branch.
         
-       Thanks,
+        Thanks,
         Team TWA'''
     )
 

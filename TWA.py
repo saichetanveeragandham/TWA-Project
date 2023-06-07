@@ -1,6 +1,9 @@
+
 import snowflake.connector
 from tkinter import *
-#connection to database established with credentials to snowflake
+
+#connection to database established with credentials
+
 
 
 try:
@@ -48,3 +51,4 @@ label2 = Label(master, text="")
 label2.pack()
 
 mainloop()
+
