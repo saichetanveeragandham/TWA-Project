@@ -1,5 +1,6 @@
 import snowflake.connector
 from tkinter import *
+
 #connection to database established with credentials
 
 try:
