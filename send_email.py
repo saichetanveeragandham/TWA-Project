@@ -7,7 +7,7 @@ def send_email(api_key, to_email, from_email):
     print("hi");
     message = Mail(
         from_email="navya.nelluri98@gmail.com",
-        to_emails=["navyachowdary.nelluri@slu.edu","saichetan.veeragandham@sluedu"],
+        to_emails=["navyachowdary.nelluri@slu.edu","saichetan.veeragandham@slu.edu"],
         subject='TWA Notification: Push event on main branch',
         plain_text_content=''' A push event has occurred on the main branch.
         
