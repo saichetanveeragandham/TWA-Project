@@ -43,3 +43,29 @@ The initial approach to this project involves the following steps:
    - Retrieving data
    - Mapping job seekers to appropriate job positions
 4. The mapped data will be available on the front end, either by sorting based on employer details or job positions.
+
+### Documentation of the CI/CD pipeline
+This is a GitHub Actions workflow configuration file. GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) tool provided by GitHub. It allows you to automate software workflows directly in your GitHub repository.
+
+Here's a breakdown of the configuration file:
+
+Event Triggers: The workflow is triggered on push and pull_request events to the main branch. This means that any time code is pushed to these branches or a pull request is made against these branches, the workflow will run.
+
+Jobs: The workflow consists of a single job named test. Jobs are run on virtual machines. They can run at the same time in parallel or sequentially depending on their dependencies.
+
+Runs-on: The test job runs on the latest version of Ubuntu. GitHub provides runners for Ubuntu, Windows, and macOS.
+
+Steps: The test job has several steps. Each step in a job executes the same runner, allowing them to share data with each other. Steps can run commands, run setup tasks, or run an action in your repository, a public repository, or an action published in a Docker registry.
+
+Checkout code: This step uses the actions/checkout@v2 action to check out your repository's code onto the runner.
+
+Change directory: This step changes the current directory to "Directory given". This might be needed if the subsequent steps need to be run in that directory.
+
+Install Node.js: This step uses the actions/setup-node@v2 action to install Node.js version 14.x on the runner.
+
+Install dependencies: This step first changes the directory to #filelocation (you should replace this with the actual path) and then runs yarn install to install the dependencies for your project.
+
+Run tests: This step also changes the directory to #filelocation (again, replace this with the actual path) and then runs yarn test to execute your project's tests.
+
+This workflow is a basic example of a Node.js project's CI pipeline. It ensures that for every push or pull request, the project's dependencies are installed and tests are run. This helps catch and fix any errors quickly and ensures that the codebase maintains a good quality.
+
