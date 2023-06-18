@@ -48,7 +48,7 @@ Install dependencies: To install the dependencies for your project, first change
 
 Run tests: In this step, the directory is also changed to #filelocation (again, replace this with the correct path), and yarn test is then run to run the tests for your project.
 
-This process serves as a simple illustration of a CI pipeline for a Node.js project. It guarantees that the project's dependencies are installed and tests are executed for each push or pull request. This keeps the codebase's quality high and makes it easier to find and remedy any issues.
+This process serves as a simple illustration of a CI pipeline for a Node.js project. It guarantees that the project's dependencies are installed and tests are executed for each push or pull request. This keeps the codebase's quality high and makes it easier to find and remedy for any issues.
 
 
 
