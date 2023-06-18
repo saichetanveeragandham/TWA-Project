@@ -24,8 +24,6 @@ Above is the initial approach to this project.
     * mapping job seekers to the appropriate job positions
 * This mapped data will be available on the front end either by sorting based on employer details or with the job positions.
 
-  
-
 This file is used to configure GitHub Actions workflows. A CI/CD (Continuous Integration/Continuous Deployment) tool offered by GitHub is called GitHub Actions. It enables direct software process automation in your GitHub repository.
 
 Here is how the configuration file is broken down:
@@ -49,6 +47,10 @@ Install dependencies: To install the dependencies for your project, first change
 Run tests: In this step, the directory is also changed to #filelocation (again, replace this with the correct path), and yarn test is then run to run the tests for your project.
 
 This process serves as a simple illustration of a CI pipeline for a Node.js project. It guarantees that the project's dependencies are installed and tests are executed for each push or pull request. This keeps the codebase's quality high and makes it easier to find and remedy any issues.
+
+  
+
+
 
 
 
