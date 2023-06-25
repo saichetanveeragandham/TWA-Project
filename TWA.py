@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import ttk
 
 # Connection to the database established with credentials
+# encapsulating these credentials will be next task
 
 try:
     con_eb = snowflake.connector.connect(user='NavyaNelluri',
