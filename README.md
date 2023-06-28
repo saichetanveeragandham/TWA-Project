@@ -25,7 +25,7 @@ Above is the initial approach to this project.
 * This mapped data will be available on the front end either by sorting based on employer details or with the job positions.
 
   
-
+# Configuration
 This file is used to configure GitHub Actions workflows. A CI/CD (Continuous Integration/Continuous Deployment) tool offered by GitHub is called GitHub Actions. It enables direct software process automation in your GitHub repository.
 
 Here is how the configuration file is broken down:
@@ -41,7 +41,7 @@ The test job comprises a number of steps. The same runner is used to execute eac
 Check out code: In this phase, the code from your repository is checked out onto the runner using the actions/checkout@v2 action.
 
 The current directory is changed to "remote" in this phase. If the next steps must be performed in that directory, then this might be required.
-
+# Project Installation
 Install Node.js: The actions/setup-node@v2 action is used in this stage to install Node.js 14.x on the runner.
 
 Install dependencies: To install the dependencies for your project, first change the directory to #filelocation (you should replace this with the actual path). Next, execute yarn install.
