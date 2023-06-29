@@ -1,0 +1,7 @@
+Specification of the file for the job seekers.
+Connecting Snowflake and python
+Use Snowflake connector.
+Creation of google forms
+Extraction of the data from the google forms
+Designing the framework to load the data files to snowflake
+In the framework, we used tkinter in the frontend applet designing
